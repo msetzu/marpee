@@ -1,0 +1,27 @@
+.mermaid {
+	display: flex;
+	width: auto;
+}
+
+/* Center pics */
+.mermaid > svg {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Edge labels */
+/*.mermaid span.edgeLabel {
+	padding: 4px;
+	border-radius: 5px;
+}*/
+
+/* Vertically align text */
+foreignObject > div {
+    vertical-align: sub;
+}
+
+/* Vertically align objects in multicolumns */
+.column > .mermaid {
+	height: 100%;
+}
