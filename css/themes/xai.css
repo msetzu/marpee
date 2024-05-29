@@ -1,0 +1,35 @@
+/* @theme xai_base */
+
+@import 'base';
+
+:root {
+  --color-background: #f4dd4d;
+  --color-foreground: #000;
+  --color-highlight: #000;
+  --color-dimmed: #5c5c5c;
+}
+
+/**************/
+/*** Footer ***/
+/**************/
+footer {
+  position: absolute;
+  left: 50px;
+  right: 50px;
+  height: 20px;
+  bottom: 30px;
+
+  background-image: url("https://github.com/msetzu/marpee/blob/master/assets/imgs/logos/xaiblack.png");
+}
+
+/***************/
+/* Page number */
+/***************/
+section::after {
+  font-weight: bold;
+  text-shadow: none;
+}
+
+section::after {
+  content: 'Page ' attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+}
