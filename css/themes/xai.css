@@ -57,7 +57,7 @@ h1 {
   width: 100%;
 
   background-color: var(--xaiyellow);
-  background-image: url(https://raw.githubusercontent.com/msetzu/marpee/master/assets/imgs/logos/xai/PNG/xai_logo_black_noback.png);
+  background-image: url(https://cdn.jsdelivr.net/gh/msetzu/marpee/assets/imgs/logos/xai/PNG/xai_logo_black_noback.png);
   background-repeat: no-repeat;
   background-position: right;
   background-position-y: bottom;
