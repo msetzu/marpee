@@ -48,8 +48,12 @@ section::after {
 
 marp-pre:has(code),
 code {
-  background-color: var(--xailightgrey);
+  background-color: var(--xailightgrey) !important;
   border-color: var(--xaigrey);
+}
+
+code {
+  color: var(--xaiblack) !important;
 }
 
 
@@ -128,10 +132,12 @@ section::after {
 th,
 td {
   background: var(--xaiblack);
+  color: var(--xaiwhite);
 }
 
 /* Mermaid */
 .mermaid .node rect,
+.mermaid .node polygon,
 .mermaid .node ellipse {
   stroke: var(--xaigrey) !important;
   fill: var(--xailightgrey) !important;
@@ -147,5 +153,5 @@ td {
 
 /* arrows */
 .mermaid .flowchart-link {
-  color: var(--xaiwhite) !important;
+  stroke: var(--xaiwhite) !important;
 }
