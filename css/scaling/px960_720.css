@@ -1,0 +1,20 @@
+section {
+  width: 960px !important;
+  height: 720px !important;
+}
+
+h1 {
+  font-size: 50px !important;
+}
+
+h2 {
+  font-size: 40px !important;
+}
+
+
+/*****************/
+/**** Mermaid ****/
+/*****************/
+.mermaid span.nodeLabel {
+  font-size: 0.9rem !important;
+}
