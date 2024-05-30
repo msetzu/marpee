@@ -17,7 +17,7 @@
 
 /* Background */
 section {
-  background-color: var(--xaiwhite) !important;
+  background-color: var(--xaiblack) !important;
 }
 
 
@@ -27,6 +27,7 @@ section {
 /*****************/
 * {
   font-family: 'Poppins' !important;
+  color: var(--xaiwhite);
 }
 
 p {
@@ -43,7 +44,7 @@ h1, h2, h3, h4, h5 {
 
 /* Page number */
 section::after {
-  color: var(--xaigrey);
+  color: var(--xaiwhite);
 }
 
 
@@ -55,15 +56,15 @@ h1 {
   /* 	position: absolute !important; */
   width: 100%;
 
-  background-color: var(--xaiyellow);
-  background-image: url(https://cdn.jsdelivr.net/gh/msetzu/marpee/assets/imgs/logos/xai/PNG/xai_logo_black_noback.png);
+  color: var(--xaiyellow);
+  background-color: var(--xaiblack);
+  background-image: url(https://cdn.jsdelivr.net/gh/msetzu/marpee/assets/imgs/logos/svg/PNG/xai_logo_color.svg);
   background-repeat: no-repeat;
   background-position: right;
   background-position-y: bottom;
   background-size: 8%;
 
   border-radius: 4px;
-  /* border-bottom: 4px solid var(--xaiyellow) !important; */
   
   padding: 0 10px !important;
   padding-right: 80px; /* padding for the logo */

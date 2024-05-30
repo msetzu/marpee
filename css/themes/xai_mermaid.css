@@ -1,0 +1,22 @@
+:root {
+  --xaiyellow: #f4dd4d;
+  --xaiblack: #000000;
+  --xaiwhite: #ffffff;
+  --xaigrey: #929597;
+  --xailightgrey: #dedede;
+  
+  --xaiblue: #a6b1cf;
+  --xaiazure: #bfe2e0;
+  --xaigreen: #d0deaa;
+  --xaiamber: #e9dec0;
+  --xaipink: #fbdad3;
+}
+
+
+/***************/
+/*** Mermaid ***/
+/***************/
+.mermaid polygon {
+  fill: var(--xailightgrey) !important;
+  stroke: var(--xaigrey) !important;
+}
