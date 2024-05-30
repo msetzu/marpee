@@ -25,3 +25,8 @@ foreignObject > div {
 .column > .mermaid {
 	height: 100%;
 }
+
+/* Font for mermaid */
+.mermaid span.nodeLabel {
+	font-weight: 600;
+}

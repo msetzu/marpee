@@ -55,7 +55,7 @@ h1 {
   /* 	position: absolute !important; */
   width: 100%;
 
-  color: var(--xaiyellow);
+  color: var(--xaiyellow) !important;
   background-color: var(--xaiblack);
   background-image: url(https://cdn.jsdelivr.net/gh/msetzu/marpee/assets/imgs/logos/xai/PNG/xai_logo_white.png);
   background-repeat: no-repeat;

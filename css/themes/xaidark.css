@@ -27,10 +27,10 @@ section {
 /*****************/
 * {
   font-family: 'Poppins' !important;
-  color: var(--xaiwhite);
 }
 
 p {
+  color: var(--xaiwhite);
   font-size: 1.5rem !important;
 }
 
@@ -42,9 +42,14 @@ h1, h2, h3, h4, h5 {
   font-weight: bold;
 }
 
-/* Page number */
 section::after {
-  color: var(--xaiwhite);
+  color: var(--xaiwhite); /* Page number */
+}
+
+marp-pre:has(code),
+code {
+  background-color: var(--xailightgrey);
+  border-color: var(--xaigrey);
 }
 
 
@@ -55,15 +60,15 @@ section::after {
 h1 {
   /* 	position: absolute !important; */
   width: 100%;
-
-  color: var(--xaiyellow);
+  
+  color: var(--xaiyellow) !important;
   background-color: var(--xaiblack);
   background-image: url(https://cdn.jsdelivr.net/gh/msetzu/marpee/assets/imgs/logos/svg/PNG/xai_logo_color.svg);
   background-repeat: no-repeat;
   background-position: right;
   background-position-y: bottom;
   background-size: 8%;
-
+  
   border-radius: 4px;
   
   padding: 0 10px !important;
@@ -101,17 +106,46 @@ section::after {
 
 /* one VS other */
 .ui.segment.VS .ui.vertical.divider.vs {
-  /* background: var(--xaiblack); */
-  color: var(--xaiyellow) !important;
-
+  color: var(--xaiblack) !important;
+  
   font-weight: bold !important;
   font-size: 2rem !important;
 }
 
 /* VS background */
 .ui.segment.VS > div.grid > div.column:nth-child(1) {
-  border-right: 30px solid var(--xaiblack);
+  border-right: 30px solid var(--xaiyellow);
 }
 .ui.segment.VS > div.grid > div.column:nth-child(2) {
-  border-left: 30px solid var(--xaiblack);
+  border-left: 30px solid var(--xaiyellow);
+}
+
+
+/*****************/
+/** Components **/
+/****************/
+.ui.segment,
+th,
+td {
+  background: var(--xaiblack);
+}
+
+/* Mermaid */
+.mermaid .node rect,
+.mermaid .node ellipse {
+  stroke: var(--xaigrey) !important;
+  fill: var(--xailightgrey) !important;
+}
+
+/* edge labels */
+.mermaid span.edgeLabel {
+  padding: 5px !important;
+  
+  background: transparent !important;
+  color: var(--xaiwhite) !important;
+}
+
+/* arrows */
+.mermaid .flowchart-link {
+  color: var(--xaiwhite) !important;
 }
