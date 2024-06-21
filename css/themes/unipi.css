@@ -125,7 +125,7 @@ section::after {
 .mermaid .node polygon,
 .mermaid .node ellipse {
   stroke: var(--unipiblue) !important;
-  fill: var(--unipilightgrey) !important;
+  fill: var(--unipiwhite) !important;
 }
 
 /* edge labels */
@@ -139,4 +139,15 @@ section::after {
 /* arrows */
 .mermaid .flowchart-link {
   stroke: var(--unipiblue) !important;
+}
+
+
+
+/*******************/
+/** Miscellaneous **/
+/*******************/
+/* Caption of images */
+div .caption p {
+    color: var(--unipigrey) !important;
+    font-size: 0.5em !important;
 }
