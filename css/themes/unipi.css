@@ -151,3 +151,13 @@ div .caption p {
     color: var(--unipigrey) !important;
     font-size: 0.5em !important;
 }
+
+/* Question blocks */
+div.ui.segment.question {
+  border-bottom: 5px solid var(--unipiblue);
+  border-radius: 5px;
+}
+
+p.question {
+  color: var(--unipiblue);
+}
