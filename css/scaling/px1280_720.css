@@ -22,6 +22,15 @@ li {
   font-size: 2rem;
 }
 
+.ui.segment {
+    font-size: 2rem;
+}
+
+/* Adjust highlight box padding */
+.ui.segment.inverted {
+    padding: 5px 15px;
+}
+
 /*****************/
 /**** Mermaid ****/
 /*****************/
