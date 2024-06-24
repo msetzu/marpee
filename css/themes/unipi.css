@@ -174,3 +174,7 @@ span.highlight {
     color: var(--unipiwhite);
     border-radius: 5px;
 }
+
+p.question {
+  font-style: italic;
+}
