@@ -162,7 +162,15 @@ p.question {
   color: var(--unipiblue);
 }
 
-/* Highlight boxes*/
+/* Highlight boxes */
 .ui.segment.inverted.highlight {
     background: var(--unipiblue);
+}
+
+/* Highlight text */
+span.highlight {
+    background: var(--unipiblue);
+    padding: 5px;
+    color: var(--unipiwhite);
+    border-radius: 5px;
 }
