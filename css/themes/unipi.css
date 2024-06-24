@@ -161,3 +161,8 @@ div.ui.segment.question {
 p.question {
   color: var(--unipiblue);
 }
+
+/* Highlight boxes*/
+.ui.segment.inverted.highlight {
+    background: var(--unipiblue);
+}
