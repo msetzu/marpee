@@ -17,6 +17,7 @@ p {
   font-size: 2rem !important;
 }
 
+.ui.segment,
 li {
   font-size: 2rem;
 }
