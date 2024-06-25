@@ -26,9 +26,19 @@ li {
     font-size: 2rem;
 }
 
+
+/****************/
+/** Components **/
+/****************/
 /* Adjust highlight box padding */
 .ui.segment.inverted {
     padding: 5px 15px;
+}
+
+/* Adjust box padding */
+div.ui.raised.segment {
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 
 /*****************/
