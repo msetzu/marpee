@@ -167,6 +167,10 @@ p.question {
     background: var(--unipiblue);
 }
 
+.inverted.highlight code {
+  color: var(--unipiwhite) !important;
+}
+
 /* Highlight text */
 span.highlight {
     background: var(--unipiblue);
