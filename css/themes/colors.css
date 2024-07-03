@@ -1,10 +1,10 @@
 /* Generic colors */
-.base.pros {
+div.segment.ui.base.pros {
   color: #00491B;
   background: #5DC383;
 }
 
-.base.cons {
+div.segment.ui.base.cons {
   color: #8C1800;
   background: #FF9079;
 }
