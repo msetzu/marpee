@@ -26,12 +26,16 @@ section {
 
 marp-pre:has(code),
 code {
-  /* background-color: var(--unipilightgrey) !important; */
   border-color: var(--unipigrey);
 }
 
 code {
   color: var(--unipiblack) !important;
+}
+
+code,
+code * {
+  font-size: 0.5em !important;
   font-family: 'Inconsolata' !important;
 }
 
