@@ -1,0 +1,14 @@
+/*********************/
+/* Basic adjustments */
+/*********************/
+
+/* Remove extra padding from pros/cons boxes */
+.ui.segment.pros, .ui.segment.cons {
+    padding: 5px;
+}
+
+/* Remove extra marging from pros/cons boxes */
+div.segment.base.pros ul,
+div.segment.base.cons ul {
+  margin-bottom: 0 !important;
+}
