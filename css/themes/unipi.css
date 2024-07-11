@@ -158,7 +158,7 @@ div .caption p {
 
 /* Question blocks */
 div.ui.segment.question {
-  border-bottom: 5px solid var(--unipiblue);
+  border: 5px solid var(--unipiblue);
   border-radius: 5px;
 }
 
