@@ -41,6 +41,10 @@ div.ui.raised.segment {
   padding-bottom: 5px;
 }
 
+table td {
+	font-size: 0.7em !important;
+}
+
 /*****************/
 /**** Mermaid ****/
 /*****************/
