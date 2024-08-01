@@ -18,7 +18,7 @@ div.segment.base.cons ul {
 /*************/
 /* Create row of images w/ img_row CSS class: img directly inside div.img_row are inline */
 div.img_row > img {
-  display: inline-block;
+  display: inline-block !important;
 }
 /* Center img container */
 div.img_row.centered {
