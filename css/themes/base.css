@@ -12,3 +12,18 @@ div.segment.base.pros ul,
 div.segment.base.cons ul {
   margin-bottom: 0 !important;
 }
+
+/*************/
+/* Templates */
+/*************/
+/* Create row of images w/ img_row CSS class: img directly inside div.img_row are inline */
+div.img_row > img {
+  display: inline-block;
+}
+/* Center img container */
+div.img_row.centered {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
