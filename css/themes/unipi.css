@@ -114,12 +114,13 @@ section::after {
 }
 
 /* VS background */
-.ui.segment.VS > div.grid > div.column:nth-child(1) {
+/* .ui.segment.VS > div.grid > div.column:nth-child(1) {
   border-right: 30px solid var(--unipiblue);
 }
 .ui.segment.VS > div.grid > div.column:nth-child(2) {
   border-left: 30px solid var(--unipiblue);
 }
+*/
 
 /*****************/
 /** Components **/
