@@ -122,6 +122,17 @@ section::after {
 }
 */
 
+/* Columns inside a VS are waaay too left-padded */
+.ui.segment.VS > div.ui.column > div.column {
+  padding-left: 0;
+}
+/* Padding back */
+.ui.segment.VS > div.ui.column > div.column > ul,
+.ui.segment.VS > div.ui.column > div.column:nth-child(2) {
+  padding-left: 1em !important;
+}
+
+
 /*****************/
 /** Components **/
 /****************/
