@@ -1,17 +1,10 @@
 /* @theme unipi */
 :root {
-  --unipiblue: #043659;
-  --unipiblack: #000000;
-  --unipiwhite: #ffffff;
-  --unipigrey: #929597;
-  --unipilightgrey: #dedede;
-}
-
-
-
-/* Background */
-section {
-  background-color: var(--unipiwhite) !important;
+  --accents: #043659;
+  --base: #000000;
+  --basecomplement: #ffffff;
+  --basecomplementlight: #929597;
+  --basecomplementextralight: #dedede;
 }
 
 
@@ -23,36 +16,14 @@ section {
   font-family: 'Arvo';
 }
 
-
-marp-pre:has(code),
 code {
-  border-color: var(--unipigrey);
-}
-
-code {
-  color: var(--unipiblack) !important;
+  color: var(--base) !important;
 }
 
 code,
 code * {
-  /* font-size: 0.5em !important; */
   font-family: 'Inconsolata' !important;
 }
-
-
-/** Font colors **/
-h1, h2, h3, h4, h5 {
-  color: var(--unipiblue) !important;
-  
-  font-weight: bold;
-}
-
-/* Page number */
-section::after {
-  color: var(--unipigrey);
-}
-
-
 
 /****************/
 /**** Header ****/
@@ -61,7 +32,7 @@ h1 {
   /* 	position: absolute !important; */
   width: 100%;
 
-  background-color: var(--unipiwhite);
+  background-color: var(--basecomplement);
   background-image: url(https://cdn.jsdelivr.net/gh/msetzu/marpee/assets/imgs/logos/unipi/SVG/unipi_full.svg);
   background-repeat: no-repeat;
   background-position: right;
@@ -69,132 +40,21 @@ h1 {
   background-size: 8%;
 
   border-radius: 0px;
-  border-bottom: 4px solid var(--unipiblue) !important;
+  border-bottom: 4px solid var(--accents) !important;
   
   padding: 0 10px !important;
   padding-right: 80px; /* padding for the logo */
 }
 
 
-
 /****************/
 /**** Footer ****/
 /****************/
-footer {
-  position: absolute !important;
-  width: 90%;
-  
-  padding: 10px;
-}
-
-
 /* Page numbers */
 section::after {
+  font-family: 'Arvo Light';
   font-weight: bold;
   text-shadow: none;
-}
-section::after {
-  font-family: 'Arvo Light';
   
   content: 'Page ' attr(data-marpit-pagination) ' of ' attr(data-marpit-pagination-total);
-}
-
-
-/***************/
-/** Templates **/
-/***************/
-
-/* one VS other */
-.ui.segment.VS .ui.vertical.divider.vs {
-  /* background: var(--unipiblack); */
-  color: var(--unipiwhite) !important;
-
-  font-weight: bold !important;
-  font-size: 2rem !important;
-}
-
-/* VS background */
-/* .ui.segment.VS > div.grid > div.column:nth-child(1) {
-  border-right: 30px solid var(--unipiblue);
-}
-.ui.segment.VS > div.grid > div.column:nth-child(2) {
-  border-left: 30px solid var(--unipiblue);
-}
-*/
-
-/* Columns inside a VS are waaay too left-padded */
-.ui.segment.VS > div.ui.column > div.column {
-  padding-left: 0;
-}
-/* Padding back */
-.ui.segment.VS > div.ui.column > div.column > ul,
-.ui.segment.VS > div.ui.column > div.column:nth-child(2) {
-  padding-left: 1em !important;
-}
-
-
-/*****************/
-/** Components **/
-/****************/
-/* Mermaid */
-.mermaid .node rect,
-.mermaid .node polygon,
-.mermaid .node ellipse {
-  stroke: var(--unipiblue) !important;
-  fill: var(--unipiwhite) !important;
-}
-
-/* edge labels */
-.mermaid span.edgeLabel {
-  padding: 5px !important;
-  
-  background: transparent !important;
-  color: var(--unipiblue) !important;
-}
-
-/* arrows */
-.mermaid .flowchart-link {
-  stroke: var(--unipiblue) !important;
-}
-
-
-
-/*******************/
-/** Miscellaneous **/
-/*******************/
-/* Caption of images */
-div .caption p {
-    color: var(--unipigrey) !important;
-    font-size: 0.5em !important;
-}
-
-/* Question blocks */
-div.ui.segment.question {
-  border: 5px solid var(--unipiblue);
-  border-radius: 5px;
-}
-
-p.question {
-  color: var(--unipiblue);
-}
-
-/* Highlight boxes */
-.ui.segment.inverted.highlight {
-    background: var(--unipiblue);
-}
-
-.inverted.highlight code {
-  color: var(--unipiwhite) !important;
-}
-
-/* Highlight text */
-span.highlight {
-    background: var(--unipiblue);
-    padding: 5px;
-    color: var(--unipiwhite);
-    border-radius: 5px;
-}
-
-p.question {
-  font-style: italic;
 }

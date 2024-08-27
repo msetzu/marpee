@@ -1,3 +1,29 @@
+/* Base colors defining the theme
+
+--base: Text
+--basecomplement: Background
+--accents: Accents such as header titles
+--basecomplementlight: Light constrast with basecomplement
+--basecomplementextralight: Extra-light constrast with basecomplement
+
+Example
+--base: Black
+--basecomplement: White
+--accents: Red
+--basecomplementlight: Light gray
+--basecomplementextralight: Extra-light gray
+
+*/
+:root {
+  --accents: #043659;
+  --base: #000000;
+  --basecomplement: #ffffff;
+  --basecomplementlight: #929597;
+  --basecomplementextralight: #dedede;
+}
+
+
+
 /*********************/
 /* Basic adjustments */
 /*********************/
@@ -20,6 +46,7 @@ div.segment.base.cons ul {
 div.img_row > img {
   display: inline-block !important;
 }
+
 /* Center img container */
 div.img_row.centered {
   width: auto;
@@ -27,3 +54,134 @@ div.img_row.centered {
   margin-right: auto;
 }
 
+/* one VS other */
+.ui.segment.VS .ui.vertical.divider.vs {
+  /* background: var(--base); */
+  color: var(--basecomplement) !important;
+
+  font-weight: bold !important;
+  font-size: 2rem !important;
+}
+
+/* Columns inside a VS are waaay too left-padded */
+.ui.segment.VS > div.ui.column > div.column {
+  padding-left: 0;
+}
+/* Padding back */
+.ui.segment.VS > div.ui.column > div.column > ul,
+.ui.segment.VS > div.ui.column > div.column:nth-child(2) {
+  padding-left: 1em !important;
+}
+
+
+/*****************/
+/** Components **/
+/****************/
+/* Mermaid */
+.mermaid .node rect,
+.mermaid .node polygon,
+.mermaid .node ellipse {
+  stroke: var(--accents) !important;
+  fill: var(--basecomplement) !important;
+}
+
+/* edge labels */
+.mermaid span.edgeLabel {
+  padding: 5px !important;
+  
+  background: transparent !important;
+  color: var(--accents) !important;
+}
+
+/* arrows */
+.mermaid .flowchart-link {
+  stroke: var(--accents) !important;
+}
+
+
+/****************/
+/***** Style ****/
+/****************/
+/* Background */
+section {
+  background-color: var(--basecomplement) !important;
+}
+
+/****************/
+/**** Footer ****/
+/****************/
+footer {
+  position: absolute !important;
+  width: 90%;
+  
+  padding: 10px;
+}
+
+
+/*****************/
+/***** Fonts *****/
+/*****************/
+/** Font colors **/
+h1, h2, h3, h4, h5 {
+  color: var(--accents) !important;
+  
+  font-weight: bold;
+}
+
+/* Page number */
+section::after {
+  color: var(--basecomplementlight);
+}
+
+
+
+/*****************/
+/***** Code *****/
+/*****************/
+
+marp-pre:has(code),
+code {
+  border-color: var(--basecomplementlight);
+}
+
+
+
+/*******************/
+/** Miscellaneous **/
+/*******************/
+/* Caption of images */
+div .caption p {
+  color: var(--basecomplementlight) !important;
+  font-size: 0.5em !important;
+}
+
+/* Question blocks */
+div.ui.segment.question {
+border: 5px solid var(--accents);
+border-radius: 5px;
+}
+
+p.question {
+color: var(--accents);
+}
+
+/* Highlight boxes */
+.ui.segment.inverted.highlight {
+  background: var(--accents);
+}
+
+.inverted.highlight code {
+color: var(--basecomplement) !important;
+}
+
+/* Highlight text */
+span.highlight {
+  background: var(--accents);
+  padding: 5px;
+  color: var(--basecomplement);
+  border-radius: 5px;
+}
+
+p.question {
+font-style: italic;
+}
