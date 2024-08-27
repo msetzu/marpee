@@ -35,7 +35,7 @@ code {
 
 code,
 code * {
-  font-size: 0.5em !important;
+  /* font-size: 0.5em !important; */
   font-family: 'Inconsolata' !important;
 }
 
