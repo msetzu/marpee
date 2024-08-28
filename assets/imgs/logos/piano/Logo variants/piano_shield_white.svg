@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="82.851959mm"
+   height="82.99836mm"
+   viewBox="0 0 82.851959 82.99836"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     style="display:inline"
+     transform="translate(-34.650853,-230.61506)">
+    <g
+       id="g37-4"
+       transform="translate(-163.60786,25.827554)">
+      <path
+         id="path23-5"
+         style="display:inline;fill:none;stroke:none;stroke-width:1.9;stroke-linecap:round"
+         d="m 239.68468,205.84584 v 80.95217 a 80.951961,80.951961 0 0 0 40.47608,-70.10683 80.951961,80.951961 0 0 0 -40.47608,-10.84534 z" />
+      <path
+         id="path24-3"
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:1.9;stroke-linecap:round"
+         transform="translate(193.7668,154.83515)"
+         d="m 45.917892,131.85373 -4e-6,0 A 80.951956,80.951956 60.000001 0 1 5.441912,61.747278 l 7e-7,0 a 80.951961,80.951961 2.7925133e-7 0 1 80.9519603,0 80.951961,80.951961 120 0 1 -40.475981,70.106452 z" />
+      <path
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 239.68467,286.68888 10e-6,-81.90138"
+         id="path25-0" />
+      <path
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 239.68468,225.69462 39.9615,1e-5"
+         id="path26-1" />
+      <path
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 239.68468,243.89894 35.72787,1e-5"
+         id="path27-9" />
+      <path
+         style="display:inline;fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 239.68469,262.10326 26.46484,1e-5"
+         id="path33-4" />
+      <rect
+         style="display:inline;fill:#ffffff;stroke:none;stroke-width:1;stroke-linecap:round;stroke-dasharray:none"
+         id="rect33-5"
+         width="17.599957"
+         height="7.5257282"
+         x="239.94865"
+         y="221.63092" />
+      <rect
+         style="display:inline;fill:#ffffff;stroke:none;stroke-width:1;stroke-linecap:round;stroke-dasharray:none"
+         id="use33-9"
+         width="17.599957"
+         height="7.5257282"
+         x="239.94865"
+         y="240.13608" />
+      <rect
+         style="display:inline;fill:#ffffff;stroke:none;stroke-width:1;stroke-linecap:round;stroke-dasharray:none"
+         id="use34-3"
+         width="17.599957"
+         height="7.5257282"
+         x="239.94865"
+         y="258.34039" />
+      <g
+         id="g36-9"
+         style="display:inline"
+         transform="translate(35.463896,101.83512)">
+        <path
+           style="fill:none;stroke:#ffffff;stroke-width:2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="m 191.80842,117.02412 -14.73991,6.33538 14.73991,6.33538"
+           id="path35-6" />
+        <ellipse
+           style="display:inline;opacity:1;fill:#ffffff;stroke:none;stroke-width:1;stroke-linecap:round;stroke-dasharray:none"
+           id="ellipse35-6"
+           cx="177.06851"
+           cy="123.35951"
+           rx="3.5909412"
+           ry="3.6156795" />
+        <ellipse
+           style="display:inline;fill:#ffffff;stroke:none;stroke-width:1;stroke-linecap:round;stroke-dasharray:none"
+           id="use35-4"
+           cx="191.80904"
+           cy="116.56477"
+           rx="3.5909412"
+           ry="3.6156795" />
+        <ellipse
+           style="display:inline;fill:#ffffff;stroke:none;stroke-width:1;stroke-linecap:round;stroke-dasharray:none"
+           id="use36-0"
+           cx="191.80904"
+           cy="130.15427"
+           rx="3.5909412"
+           ry="3.6156795" />
+      </g>
+    </g>
+  </g>
+</svg>
