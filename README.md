@@ -8,6 +8,10 @@ Online repository of several [Marp](https://marp.app) styles: write your slides 
 
 ---
 
+# Quickstart
+
+You can find a quickstart in the `Demo presentation.pdf`. This is also oriented at who has never used Markdown before.
+
 # Presentations
 
 - [Pivot Tree @ECML/PKDD 2024](https://github.com/msetzu/marpee/tree/gallery/pivottree)
