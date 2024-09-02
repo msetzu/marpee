@@ -195,7 +195,11 @@ div.message.compact .citation.image {
 }
 
 .inverted.highlight code {
-color: var(--basecomplement) !important;
+  color: var(--basecomplement) !important;
+}
+
+.ui.segment.inverted.highlight p {
+  margin-bottom: 0 !important;
 }
 
 /* Highlight text */
