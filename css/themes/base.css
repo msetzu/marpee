@@ -180,6 +180,10 @@ div.message .description {
   font-size: large !important;
 }
 
+div.message.quote img.image.author {
+  margin-bottom: 0 !important;
+}
+
 div.compact.message {
   padding: 0.5em;
 }
