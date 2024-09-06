@@ -64,11 +64,13 @@ topic:
 
 <style>
 /* Affiliation */
-.description {
-color: var(--unipigrey);
+span.description {
+color: var(--basecomplementlight);
 font-style: italic;
 }
-
+div.caption p {
+color: var(--base) !important;
+}
 /* Factuals and counterfactuals */
 img.image.factual {
 border-bottom: 10px solid #5DC383 !important;
@@ -95,7 +97,6 @@ border-radius: 5px;
 line-height: 1em;
 }
 </style>
-
 
 <!-- paginate: skip -->
 
@@ -133,21 +134,16 @@ Riccardo Guidotti <span class="description">University of Pisa</span>
 
 # Explainability and its many forms
 
-- Feature importance: Define a set of features **impacting** the task
-- Decision rules: Define a set of constraint **defining** a behavior
-- Counterfactuals: Define a set of constraints **defining** a behavior
+- Feature importance: **impacting** the task
+- Decision rules: **describing** the task
+- Counterfactuals: **defining** a behavior
 
 <div class="column img_row centered">
+<img class="ui medium centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/feature%20importance.svg">
 <img class="ui medium centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/rule.svg">
 <img class="ui medium centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/counter.svg">
-<img class="ui medium centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/feature%20importance.svg">
 </div>
 
-<div class="caption">
-
-Explanations types: rules, counterfactual rules, and feature importance.
-
-</div>
 
 <!-- paginate: true -->
 
@@ -160,15 +156,9 @@ Explanations types: rules, counterfactual rules, and feature importance.
 - Counterfactuals: What to change?
 
 <div class="column img_row centered">
+<img class="ui medium centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/feature%20importance.svg">
 <img class="ui medium centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/rule.svg">
 <img class="ui medium centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/counter.svg">
-<img class="ui medium centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/feature%20importance.svg">
-</div>
-
-<div class="caption">
-
-Explanations types: rules, counterfactual rules, and feature importance.
-
 </div>
 
 <!-- paginate: true -->
@@ -182,20 +172,14 @@ Explanations types: rules, counterfactual rules, and feature importance.
 - Counterfactuals: Local
 
 <div class="column img_row centered">
+<img class="ui medium centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/feature%20importance.svg">
 <img class="ui medium centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/rule.svg">
 <img class="ui medium centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/counter.svg">
-<img class="ui medium centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/feature%20importance.svg">
-</div>
-
-<div class="caption">
-
-Explanations types: rules, counterfactual rules, and feature importance.
-
 </div>
 
 ---
 
-# An XAI roadblock: non-relational data
+# Non-relational data: breaking the mold
 
 <div class="ui two column doubling stackable grid container bottom">
 <div class="column">
@@ -225,57 +209,24 @@ A saliency map requires a perturbation algorithm how to *jointly* perturb pixels
 <div class="ui two column doubling stackable grid container bottom">
 <div class="column">
 
-Define a set of instances, which can...
-- Indicate which instances are important
-- Define neighborhoods
-- Provide counterfactuals
+A.k.a. prototypes, pivots. Define a set of instances, which define...
+- Importances
+- Counterfactuals
 
-By design they tackle sparsity, inter-instance relationships, and
-<span class="highlight">push interpretation to the user!</span>
-
-</div>
-<div class="column">
-<img class="ui large centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/protopnet_architecture.png">
-<div class="caption">
-
-A case-based model: the bird in the picture is classified as *Clay-colored sparrow* on the basis of its relationship with other prototypes: the model predicts by leveraging instances.
-
-</div>
-</div>
-</div>
-
----
-
-# Case-based explanations
-
-<div class="ui two column doubling stackable grid container bottom">
-<div class="column">
-
-- Often universal, and applicable to any data type
-- Inherently understandable, since we often rely on case-based reasoning ourselves
-- Applicable at different scopes, both local and global
-
+By design they tackle sparsity and inter-instance relationships!
 
 </div>
 <div class="column">
 <img class="ui large centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/find_cases.png">
 <div class="caption">
 
-Cases lend themselves to explanation too: here, feature importance of the retrieved cases.
+The bird in the picture is classified as *Clay-colored sparrow* on the basis of its similarity with some prototypes.
 
 </div>
 </div>
 </div>
-
-<!-- footer: "Prototype selection for interpretable classification. J. Bien et al.
-
-Deep learning for interpretable image recognition. C. Chen et al.
-
-Interpreting CNNs via Decision Trees. Q. Zhang et al.
-" -->
 
 ---
-
 # The case-based landscape
 
 <div class="ui two column doubling stackable grid container bottom">
@@ -337,7 +288,7 @@ Our proposal, **Pivot Tree** is a case-based model for explainable classificatio
 </div>
 <div class="column">
 
-<img class="ui image large" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/3x/pivot_tree_xlarge@3x.png">
+<img class="ui image large centered" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/3x/pivot_tree_xlarge@3x.png">
 <div class="caption">
 
 A Pivot Tree: instances laid on a tree structure route predictions. Similarity to instances determines routing, and leaves are also associated with a classification label.
@@ -348,264 +299,52 @@ A Pivot Tree: instances laid on a tree structure route predictions. Similarity t
 </div>
 </div>
 
-<!-- footer: "Data-Agnostic Pivotal Instances Selection for Decision-Making Models. Cascione et al." -->
+<!-- footer: "" -->
 
 ---
-
-# Pivot Tree
+# Learning a Pivot Tree (PTC)
 
 <div class="ui two column doubling stackable grid container bottom">
 <div style="" class="column">
 
-**Learning a Pivot Tree**
-- Select a set of pivots $P$ with $\pi(X)$
-- Learn a tree $f(\pi(X))$ on $P = \pi(X)$
+**Pivot Tree Classifier (PTC)**
 
+<img class="ui image medium centered" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/4x/pipeline@4x.png">
 </div>
 <div class="column">
 
-<img class="ui image large" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/3x/pivot_tree_xlarge@3x.png">
-<div class="caption">
-
-A Pivot Tree: instances laid on a tree structure route predictions. Similarity to instances determines routing, and leaves are also associated with a classification label.
+1. Compute a similarity matrix $S$, possibly embedding data
+2. Induce a Decision Tree on $S$, filtering similarities to
+	- **discriminative** pivots: maximizing entropy
+	- **descriptive pivots**: maximizing class centrality
+   
 
 </div>
-
 </div>
-</div>
-
-<!-- footer: "Data-Agnostic Pivotal Instances Selection for Decision-Making Models. Cascione et al." -->
 
 ---
-
-
-# Pivot Tree: selecting pivots
+# Learning a Pivot Selector (PTS)
 
 <div class="ui two column doubling stackable grid container bottom">
-<div class="column">
+<div style="" class="column">
 
-How do we choose *pivots*? We don't. We compute a similarity matrix $S$: <span class="highlight">learning pivots is data-driven!</span>
+Pivots in the nodes constitue a dataset themselves!
 
-Provided a similarity metric $s: \mathcal{X} \times \mathcal{X} \rightarrow \mathbb{R}$ is given, constructing $S$ is data-agnostic!
+1. Extract pivots from nodes
+2. Train an interpretable model
+   **on top** of Pivot Tree
 
-</div>
-
-<div class="column">
-
-<img class="ui image large" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/heatmap_with_images_euclid.png">
-<div class="caption">
-
-A similarity matrix induced on Pivot Tree's training data (oral cancer detection).
-
-</div>
-
-</div>
-</div>
-
-<!-- footer: "Data-Agnostic Pivotal Instances Selection for Decision-Making Models. Cascione et al." -->
-
----
-# Pivot Tree: inducing a tree
-
-<style scoped>
-marp-pre {
-transform: scale(0.75);
-}
-</style>
-
-<div class="ui two column doubling stackable grid container bottom">
-<div class="column w60">
-
-With a (new) feature matrix $S$, inducing a Pivot Tree can be reduced to any of the existing state-of-the-art tree-induction algorithms, e.g., CART, C.5, etc.
-
-</div>
-<div class="column w35">
-
-<img class="ui image large" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/3x/pivot_tree_xlarge@3x.png">
-<div class="caption">
-
-An induced Pivot Tree.
-
-</div>
-
-</div>
-</div>
-
-```python
-def induce_split(similarities, labels):
-  splits_values = candidate_splits_per_feature(similarities)
-  splits = partition(labels, splits)
-  impurities = entropy(partitions)
-
-  return partitions[argmin(impurities)]
-```
-
-
-<!-- footer: "Data-Agnostic Pivotal Instances Selection for Decision-Making Models. Cascione et al." -->
-
----
-
-# Pivot... anything
-
-Pivots selected by Pivot Tree constitute a set $P$ of data... that we can later re-use for learning another downstream model!
-
-- $k$-nearest neighbor... defined on $P$
-- decision tree... induced on $P$
-- ...
-
----
-
-# Pivot Tree
-
-<div class="ui two column doubling stackable grid container bottom">
-<div class="column">
-<div class="ui segment base pros"> 
-
-- Explainable by design
-- Data-agnostic
-- Factual explanations
-- Counterfactuals
-- Local and global explanations
-- Hierarchical case structure
-- Relatively low complexity
-
-</div>
 </div>
 <div class="column">
 
-<img class="ui image huge" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/3x/pivot_tree_xlarge@3x.png">
-<div class="caption">
+**Pivot Tree Selector (PTS)**
 
-An induced Pivot Tree.
-
+<img class="ui image large" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/4x/pipeline_alternate@4x.png">
 </div>
-
-</div>
-</div>
-
-<!-- footer: "Data-Agnostic Pivotal Instances Selection for Decision-Making Models. Cascione et al." -->
-
----
-
-# Experiments
-
-
-<div class="ui three column doubling stackable grid container bottom">
-<div class="column">
-
-**Explainability**
-
-- How faithful is Pivot Tree?
-- How complex is Pivot Tree?
-- How stable is Pivot Tree?
-
-</div>
-
-<div class="column">
-
-**Competitors**
-
-- $\varepsilon$-ball
-- $k$-NN
-
-</div>
-
-<div class="column">
-
-**Datasets**
-
-- 11 tabular
-- 5 time series
-- 3 image
-- 5 text
-
-</div>
-
-</div>
-
-<!-- footer: "" -->
-
----
-
-# How faithful is Pivot Tree?
-
-Downstream model: CART decision tree.
-
-**F1-score**
-
-|                   | Random  | Random per class | K-means Pivots | K-means Pivots | $\varepsilon$-ball | Pivot Tree S | Pivot Tree C |
-| ----------------- | ------- | ---------------- | -------------- | -------------- | ------------------ | ------------ | ------------ |
-| $mean \uparrow$   | .60     | .60              | .**62**        | .*61*          | .*61*              | .**62**      | .58          |
-| $std \downarrow$  | .**22** | .**22**          | .**22**        | .**22**        | .*23*              | .**22**      | .27          |
-| $rank \downarrow$ | 5.0     | 4.6              | 4.0            | *3.6*          | 3.7                | **3.1**      | 3.9          |
-
-<!-- footer: "" -->
-
----
-
-# How faithful is Pivot Tree?
-
-Downstream model: $k$-NN.
-
-**F1-score**
-
-|                   | Random | Random per class | K-means Pivots | K-means Pivots | $\varepsilon$-ball | Pivot Tree S | Pivot Tree C |
-| ----------------- | ------ | ---------------- | -------------- | -------------- | ------------------ | ------------ | ------------ |
-| $mean \uparrow$   | .72    | .72              | .*73*          | .*73*          | .**74**            | .*73*        | *.73*        |
-| $std \downarrow$  | .*19*  | .*19*            | .**18**        | .*19*          | .*19*              | .*19*        | *.19*        |
-| $rank \downarrow$ | 4.8    | 4.1              | *3.0*          | 3.1            | **2.2**            | 3.5          | 3.5          |
-
-<!-- footer: "" -->
-
----
-
-# How complex is Pivot Tree?
-
-<div class="img_row centered">
-<img class="ui image large" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/simplicity_DT.png">
-<img class="ui image large" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/simplicity_KNN.png">
-</div>
-<div class="caption">
-
-Scatter plot of $f1$ score and simplicity of Pivot Tree and its competitors, on a decision tree (left) and $k$-NN (right) model.
-
 </div>
 
 ---
-
-# How stable is Pivot Tree?
-
-<div class="img_row centered">
-<img class="ui image large" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/sensitivity_DT_c.png">
-<img class="ui image large" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/sensitivity_KNN_c.png">
-</div>
-<div class="caption">
-
-Scatter plot of $f1$ score of Pivot Tree as the maximum number of pivots increases.
-
-</div>
-
----
-
-# A real-world study: oral cancer detection
-
-A real-world case study on an oral cancer detection dataset.
-
-- 535 images
-- 3 classes
-- [Publicly available](https://mlpi.ing.unipi.it/doctoralai/)
-
-|              | Pivot Tree | Decision Tree | $k$-NN |     | **CNN** |
-| ------------ | ---------- | ------------- | ------ | --- | ------- |
-| $f1$         | **.834**   | .833          | .811   |     | .854    |
-| $complexity$ | 9          | 47            | **5**  |     |         |
-
-
-<!-- footer: "Interpretable Machine Learning for Oral Lesion Diagnosis through Prototypical Instances Identification. Cascione et al." -->
-
----
-
-# Qualitative results
+# A qualitative result
 
 **Cifar 10**
 
@@ -625,30 +364,135 @@ An instance (left), and pivots extracted by Pivot Tree. The cat has high similar
 <!-- footer: "" -->
 
 ---
+# Experiments
 
-# Qualitative results
 
-**Cifar 10**
+<div class="ui three column doubling stackable grid container bottom">
+<div class="column">
 
-<div class="img_row centered">
-<img style="margin-right: 150px;" class="ui image small" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/bird_447_img_test_instance.png">
-<img class="ui image small factual" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/bird_447_img_test_instance.png">
-<img class="ui image small factual" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/bird_410_img_neighs.png">
-<img class="ui image small factual" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/bird_441_img_neighs.png">
-<img class="ui image small factual" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/bird_501_img_neighs.png">
-<img class="ui image small factual" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/bird_977_img_neighs.png">
+**Explainability**
+
+- Fidelity
+- Complexity
+- Stability
+
 </div>
-<div class="caption">
 
-An instance (left), and pivots extracted by Pivot Tree. The bird has high similarity with all the pivots.
+<div class="column">
+
+**Competitors**
+
+- $\varepsilon$-ball
+- $k$-NN
+
+</div>
+
+<div class="column">
+
+**Datasets**
+
+- 11 tabular
+- 5 time series
+- 3 image + 1 real world use case of oral cancer detection
+- 5 text
+</div>
 
 </div>
 
 <!-- footer: "" -->
 
 ---
+# How faithful is Pivot Tree?
+
+<style scoped>
+table {
+transform: scale(0.8);
+}
+</style>
+<div class="ui two column doubling stackable grid container bottom">
+<div class="column">
+
+|                    | $mean\uparrow$ | $std\downarrow$ | $rank\downarrow$ |
+| ------------------ | -------------- | --------------- | ---------------- |
+| **PTS + DT**       | .62            | .22             | 3.1              |
+| K-medoids          | .61            | .22             | 3.6              |
+| $\varepsilon$-ball | .61            | .23             | 3.7              |
+| **Pivot Tree**     | .58            | .27             | 3.9              |
+| K-means            | .62            | .22             | 4.0              |
+| Random per class   | .60            | .22             | 4.6              |
+| Random             | .60            | .22             | 5.0              |
 
 
+</div>
+<div class="column">
+
+On $f1$ score...
+- Pivot Tree works **better** as a pivot **selector than** a standalone **classifier**
+- Models built directly on data lag behind: good data matters
+
+</div>
+</div>
+
+<!-- footer: "" -->
+
+---
+# A real-world study: oral cancer detection
+
+A real-world case study on an oral cancer detection dataset.
+
+- 535 images
+- 3 classes
+- [Publicly available](https://mlpi.ing.unipi.it/doctoralai/)
+
+|              | Pivot Tree | Decision Tree | $k$-NN | **CNN** |
+| ------------ | ---------- | ------------- | ------ | ------- |
+| $f1$         | **.834**   | .833          | .811   | .854    |
+| $complexity$ | 9          | 47            | **5**  |         |
+
+---
+
+# How complex is Pivot Tree?
+
+<div class="ui two column doubling stackable grid container bottom">
+<div class="column">
+<div class="img_row centered">
+<img class="ui image large" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/simplicity_DT.png">
+</div>
+<div class="caption">
+
+Scatter plot of $f1$ score and simplicity of Pivot Tree and its competitors, regularized to use a maximum of $20$ pivots.
+
+</div>
+</div>
+<div class="column">
+
+- When not regularized, Pivot Tree slightly worse than competitors
+- More complex models (bottom) have higher variance
+
+</div>
+</div>
+
+---
+# How stable is Pivot Tree?
+
+
+<div class="ui two column doubling stackable grid container bottom">
+<div class="column">
+<img class="ui image large" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/sensitivity_DT_c.png">
+<div class="caption">
+
+Scatter plot of $f1$ score of Pivot Tree as the maximum number of pivots increases. $C$ indicates the number of classes.
+
+</div>
+</div>
+<div class="column">
+
+Low variance but decreasing trend as regularization decreases: Occam's razor!
+
+</div>
+</div>
+
+---
 # Pivot Tree
 
 <div class="ui two column doubling stackable grid container bottom">
@@ -656,17 +500,9 @@ An instance (left), and pivots extracted by Pivot Tree. The bird has high simila
 
 An explainable by-design case-based algorithm.
 
-<div class="ui segment base pros"> 
-
-- Explainable by design
-- Data-agnostic
-- Factual explanations
-- Counterfactuals
-- Local and global explanations
-- Hierarchical case structure
-- Relatively low complexity
-
-</div>
+Future work:
+- Proximity splits: to which pivots are instances more similar?
+- More powerful downstream models
 
 </div>
 <div class="column">
@@ -681,4 +517,3 @@ An explainable by-design case-based algorithm.
 </div>
 </div>
 
-<!-- footer: "Data-Agnostic Pivotal Instances Selection for Decision-Making Models. Cascione et al." -->
