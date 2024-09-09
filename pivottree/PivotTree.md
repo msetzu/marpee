@@ -105,7 +105,7 @@ line-height: 1em;
 <div class="ui two column doubling stackable grid container bottom">
 <div class="column">
 
-*Case-based Trees for relational and non-relational data*
+**PivotTree**: *Case-based Trees for relational and non-relational data*
 
 Alessio Cascione <span class="description">University of Pisa</span>
 *Mattia Setzu* <span class="description">University of Pisa</span>
@@ -114,7 +114,7 @@ Riccardo Guidotti <span class="description">University of Pisa</span>
 
 </div>
 <div class="column">
-<img class="ui image large" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/3x/pivot_tree_xlarge@3x.png">
+<img class="ui image huge" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/3x/pivot_tree_xlarge@3x.png">
 </div>
 </div>
 
@@ -134,9 +134,9 @@ Riccardo Guidotti <span class="description">University of Pisa</span>
 
 # Explainability and its many forms
 
-- Feature importance: **impacting** the task
-- Decision rules: **describing** the task
-- Counterfactuals: **defining** a behavior
+- **Feature importance.** Defines impact: what is *important*? (Local)
+- **Decision rules**. Describes: what *decides*? (Semi-global)
+- **Counterfactuals.** Contrasts: what to *change*? (Local)
 
 <div class="column img_row centered">
 <img class="ui medium centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/feature%20importance.svg">
@@ -148,37 +148,6 @@ Riccardo Guidotti <span class="description">University of Pisa</span>
 <!-- paginate: true -->
 
 ---
-
-# Explainability and its many questions
-
-- Feature importance: What is important?
-- Decision rules: What decides?
-- Counterfactuals: What to change?
-
-<div class="column img_row centered">
-<img class="ui medium centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/feature%20importance.svg">
-<img class="ui medium centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/rule.svg">
-<img class="ui medium centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/counter.svg">
-</div>
-
-<!-- paginate: true -->
-
----
-
-# Explainability and its many scopes
-
-- Feature importance: Local
-- Decision rules: Local/Semi-global
-- Counterfactuals: Local
-
-<div class="column img_row centered">
-<img class="ui medium centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/feature%20importance.svg">
-<img class="ui medium centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/rule.svg">
-<img class="ui medium centered image" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/presentations/xai/counter.svg">
-</div>
-
----
-
 # Non-relational data: breaking the mold
 
 <div class="ui two column doubling stackable grid container bottom">
@@ -209,7 +178,7 @@ A saliency map requires a perturbation algorithm how to *jointly* perturb pixels
 <div class="ui two column doubling stackable grid container bottom">
 <div class="column">
 
-A.k.a. prototypes, pivots. Define a set of instances, which define...
+A.k.a. prototypes, pivots. Define a set of instances, which are explanations **on their own**, and can also be explained
 - Importances
 - Counterfactuals
 
@@ -276,11 +245,9 @@ Our proposal, **Pivot Tree** is a case-based model for explainable classificatio
 
 <div class="ui segment base pros"> 
 
-- Explainable by design
 - Data-agnostic
-- Factual explanations
-- Counterfactuals
-- Local and global explanations
+- Factual *and* counterfactual explanations
+- Local *and* global explanations
 - Hierarchical case structure
 
 </div>
@@ -288,7 +255,7 @@ Our proposal, **Pivot Tree** is a case-based model for explainable classificatio
 </div>
 <div class="column">
 
-<img class="ui image large centered" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/3x/pivot_tree_xlarge@3x.png">
+<img class="ui image huge centered" src="https://cdn.jsdelivr.net/gh/msetzu/marpee@latest/assets/imgs/papers/pivot_tree/3x/pivot_tree_xlarge@3x.png">
 <div class="caption">
 
 A Pivot Tree: instances laid on a tree structure route predictions. Similarity to instances determines routing, and leaves are also associated with a classification label.
@@ -357,7 +324,7 @@ Pivots in the nodes constitue a dataset themselves!
 </div>
 <div class="caption">
 
-An instance (left), and pivots extracted by Pivot Tree. The cat has high similarity to the first two, and low to the latter two.
+An instance (left), and pivots extracted by Pivot Tree. The cat has <span style="color: #5DC383;">high similarity</span> to the first two, and <span style="color: #FF9079;">low</span> to the latter two.
 
 </div>
 
@@ -427,6 +394,7 @@ transform: scale(0.8);
 <div class="column">
 
 On $f1$ score...
+- Pivot Tree selector is the best performing model
 - Pivot Tree works **better** as a pivot **selector than** a standalone **classifier**
 - Models built directly on data lag behind: good data matters
 
@@ -442,12 +410,14 @@ A real-world case study on an oral cancer detection dataset.
 
 - 535 images
 - 3 classes
-- [Publicly available](https://mlpi.ing.unipi.it/doctoralai/)
 
 |              | Pivot Tree | Decision Tree | $k$-NN | **CNN** |
 | ------------ | ---------- | ------------- | ------ | ------- |
 | $f1$         | **.834**   | .833          | .811   | .854    |
 | $complexity$ | 9          | 47            | **5**  |         |
+
+<!-- footer: "Publicly available at https://mlpi.ing.unipi.it/doctoralai/" -->
+
 
 ---
 
@@ -467,10 +437,12 @@ Scatter plot of $f1$ score and simplicity of Pivot Tree and its competitors, reg
 <div class="column">
 
 - When not regularized, Pivot Tree slightly worse than competitors
-- More complex models (bottom) have higher variance
+- More complex models (bottom) are less impacted from regularization
 
 </div>
 </div>
+
+<!-- footer: "" -->
 
 ---
 # How stable is Pivot Tree?
@@ -498,7 +470,7 @@ Low variance but decreasing trend as regularization decreases: Occam's razor!
 <div class="ui two column doubling stackable grid container bottom">
 <div class="column">
 
-An explainable by-design case-based algorithm.
+An explainable case-based decision tree, providing factual and counterfactual case-based explanations.
 
 Future work:
 - Proximity splits: to which pivots are instances more similar?
