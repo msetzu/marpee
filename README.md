@@ -27,6 +27,14 @@ Includes two themes:
 - `unipi` (`css/themes/unipi.css`) *Unofficial* theme used for slides at University of Pisa.
 - `xai` (`css/themes/xai.css`) *Unofficial* theme for the [XAI ERC project](https://xai-project.eu/).
 
+It also includes a base theme for documents, which are generated with a pandoc `MD > HTML > PDF` pipeline:
+```
+pandoc --mathjax --toc --standalone -f markdown -t html {$IN}.md -o {$OUT}.html
+```
+The html is then exported in the browser.
+This allows to introduce `css` styling in the pdf.
+
+
 ### Templates
 `templates/` offers a set of useful templates, e.g., two-columns slide
 
