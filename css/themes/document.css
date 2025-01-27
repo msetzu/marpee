@@ -1,0 +1,115 @@
+/* @theme unipi */
+:root {
+    --accents: #043659;
+    --base: #000000;
+    --basecomplement: #ffffff;
+    --basecomplementlight: #929597;
+    --basecomplementextralight: #dedede;
+	--blue: #7287fd;
+}
+
+
+
+/*****************/
+/* HTML fixing ***/
+/*****************/
+/* Hide navigation */
+nav#TOC {
+	display: none;
+}
+
+
+/* Fix shrinking of html */
+body {
+	max-width: 100% !important;
+}
+
+/* SVG problem in export to PDF from HTML */
+@media print {
+	mjx-container[jax="SVG"] :is(use[data-c], path[data-c]) {
+		stroke-width: 0;
+	}
+}
+
+/*****************/
+/***** Fonts *****/
+/*****************/
+* {
+    font-family: 'Arvo';
+}
+
+body {
+	padding-left: 75px;
+	padding-right: 75px;
+}
+
+a,
+a:visited {
+	color: var(--blue);
+}
+
+code {
+    border-color: var(--basecomplementlight);
+    background: var(--basecomplementextralight);
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+code,
+code * {
+	font-family: 'Inconsolata' !important;
+}
+
+
+/* Image boxes */
+div.imagebox {
+	width: auto;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 1em;
+	padding: 10px 10px 5px 10px;
+	background-color: var(--basecomplementextralight);
+	border-radius: 4px;
+}
+
+@media print {
+	div.imagebox {
+		background-color: var(--basecomplementextralight);
+	}
+}
+
+div.img_row {
+	width: fit-content !important;
+	padding: 10px;
+}
+
+/* Captions */
+div.imagebox .caption p {
+	color: var(--base) !important;
+	font-size: 1em !important;
+}
+div.caption span.head {
+	font-weight: bold;
+}
+div.caption {
+	margin-bottom: 1em;
+}
+
+/* Latex formulas in a box */
+/* center them! */
+img.math.display {
+    display: block;
+    width: auto;
+    margin: auto;
+}
+
+/* Tables */
+/* table coloring */
+@media print {
+	tr.odd {
+		background: #dedede;
+	}
+}
+tr.odd {
+    background: #dedede;
+}
