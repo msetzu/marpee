@@ -18,6 +18,10 @@ nav#TOC {
 	display: none;
 }
 
+hr {
+	margin-bottom: 1em;
+}
+
 
 /* Fix shrinking of html */
 body {
@@ -35,7 +39,7 @@ body {
 /***** Fonts *****/
 /*****************/
 * {
-    font-family: 'Arvo';
+	font-family: 'Arvo';
 }
 
 body {
@@ -49,7 +53,7 @@ a:visited {
 }
 
 code {
-    border-color: var(--basecomplementlight);
+	border-color: var(--basecomplementlight);
     background: var(--basecomplementextralight);
     padding: 2px 4px;
     border-radius: 3px;
@@ -98,7 +102,7 @@ div.caption {
 /* Latex formulas in a box */
 /* center them! */
 img.math.display {
-    display: block;
+	display: block;
     width: auto;
     margin: auto;
 }
@@ -111,5 +115,18 @@ img.math.display {
 	}
 }
 tr.odd {
-    background: #dedede;
+	background: #dedede;
+}
+
+/*****************/
+/* Blocks ********/
+/*****************/
+/* Message icons */
+div.ui.message div.header > i {
+	float: left;
+	margin-right: 5px;
+}
+
+div.ui.message div.header p {
+	margin-top: 0px;
 }
