@@ -217,3 +217,7 @@ span.highlight {
 p.question {
 font-style: italic;
 }
+
+.ui.raised.segment.question p {
+  font-size: 29px;
+}
