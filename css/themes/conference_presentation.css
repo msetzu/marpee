@@ -1,0 +1,12 @@
+import 'base';
+
+/* Affiliation */
+span.description {
+	color: var(--basecomplementlight);
+	font-style: italic;
+}
+
+/* caption color */
+div.caption p {
+	color: var(--base) !important;
+}
