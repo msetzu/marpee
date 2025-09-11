@@ -8,3 +8,12 @@ div.segment.ui.base.cons {
   color: #8C1800;
   border-left: 10px solid #FF9079;
 }
+
+/* Color filter for svg images: they color the whole image*/
+.image.pros-filter {
+  filter: brightness(0) saturate(100%) invert(67%) sepia(3%) saturate(5688%) hue-rotate(91deg) brightness(100%) contrast(85%);
+}
+
+.image.cons-filter {
+  filter: brightness(0) saturate(100%) invert(84%) sepia(16%) saturate(6628%) hue-rotate(309deg) brightness(101%) contrast(101%);
+}
