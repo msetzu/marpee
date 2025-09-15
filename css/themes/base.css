@@ -28,9 +28,13 @@ Example
 /* Basic adjustments */
 /*********************/
 
-/* Remove extra padding from pros/cons boxes */
+/* Remove extra padding from pros/cons boxes and cards*/
 .ui.segment.pros, .ui.segment.cons {
     padding: 5px;
+}
+
+div.ui.card div.content {
+  padding: 18px !important;
 }
 
 /* Remove extra marging from pros/cons boxes */
@@ -98,6 +102,10 @@ div.img_row.centered {
   stroke: var(--accents) !important;
 }
 
+/* Cards */
+.ui.card {
+  width: auto;
+}
 
 /****************/
 /***** Style ****/

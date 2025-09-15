@@ -12,8 +12,14 @@
 /*****************/
 /***** Fonts *****/
 /*****************/
-* {
+*,
+.ui.card > .content > .header {
   font-family: 'Arvo';
+}
+
+.ui.card > .content > .header {
+  font-size: 0.66em !important;
+  font-weight: bold;
 }
 
 code {

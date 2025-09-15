@@ -10,3 +10,25 @@ span.description {
 div.caption p {
 	color: var(--base) !important;
 }
+
+/* centered text box */
+div.ui.centered,
+p.centered {
+  text-align: center;
+}
+
+/* fix cards */
+/* width */
+.ui.card {
+	width: auto;
+}
+
+/* padding */
+div.ui.card div.content {
+	padding: 18px !important;
+}
+
+div.ui.grid.container.header div.column p {
+	text-align: center;
+	font-weight: bold;
+}
