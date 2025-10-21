@@ -7,6 +7,7 @@ span.description {
 /* caption color */
 div.caption p {
 	color: var(--base) !important;
+	opacity: 0.75;
 }
 
 /* centered text box */
