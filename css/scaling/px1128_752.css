@@ -1,0 +1,22 @@
+h1 {
+  font-size: 60px !important;
+}
+
+h2 {
+  font-size: 45px !important;
+}
+
+p {
+  font-size: 2rem !important;
+}
+
+li {
+	font-size: 1.75rem !important;
+}
+
+/*****************/
+/**** Mermaid ****/
+/*****************/
+.mermaid span.nodeLabel {
+  font-size: 1rem !important;
+}
